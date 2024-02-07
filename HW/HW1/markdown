@@ -1,0 +1,1 @@
+I first started by creating a string then turning it lowercase, then i got rid of all of the spaces. After that i removed any non-alphanumeric characters. I then reversed the string and checked to see if it was a palindrome.

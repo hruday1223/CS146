@@ -1,0 +1,20 @@
+class Main {
+    public static void main(String[] args) {
+       String s = "Do geese see God?";
+       
+       String lowercase_s = s.toLowerCase();
+       String space_s = lowercase_s.replace(" ","");
+       String alf_s = space_s.replaceAll("[^a-zA-Z0-9]", "");
+       StringBuilder reverseString = new StringBuilder(alf_s).reverse();
+        String reversed_s = reverseString.toString();
+
+        if (reversed_s.equals(alf_s)){
+            System.out.println("True");
+        }
+        else {
+            System.out.println("False");
+           
+        }
+       
+    }
+}

@@ -1,0 +1,14 @@
+s = 'Do geese see God?'
+nonalf_s = ''
+lowercase_s = s.lower()
+space_s = lowercase_s.replace(' ', '')
+for alf in space_s:
+    if alf.isalnum():
+        nonalf_s += alf
+reverse_s = nonalf_s[::-1]
+
+if nonalf_s == reverse_s:
+    print(True)
+else:
+    print(False)
+
