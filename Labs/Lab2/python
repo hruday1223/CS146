@@ -1,0 +1,18 @@
+s = 'dormitory'
+t = 'dirty room'
+i = 0
+
+space_s = s.replace(' ', '')
+space_t = t.replace(' ', '')
+
+if len(space_s) == len(space_t):
+    for check in space_s:
+        for c in space_t:
+            if check == c:
+                i+= 1
+                if i == len(space_s):
+                    print(True)
+                
+else:
+    print(False)
+                

@@ -1,0 +1,30 @@
+class Main {
+    public static void main(String[] args) {
+       
+       String s = "dormitory";
+       String t = "dirty room";
+       int counter = 0;
+       
+       String space_s = s.replace(" ","");
+       String space_t = t.replace(" ","");
+       
+       if (space_s.length() == space_t.length()){
+           for(int i = 0;i<space_s.length();i++){
+              char char_s = space_s.charAt(i);
+               for(int j = 0;i<space_t.length();i++){
+                   char char_t = space_t.charAt(j);
+                   if(char_s == char_t){
+                        counter++;
+                       if (counter==space_s.length()){
+                           System.out.println("True");
+                       }
+                   }
+           }
+       }
+       
+       }
+       else{
+           System.out.println("False");
+    }
+}
+}
