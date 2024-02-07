@@ -1,0 +1,19 @@
+class Main {
+    public static void main(String[] args) {
+    
+    int beginning = 1;
+    int end = n;
+    int middle = 0;
+    
+    while(beginning<end){
+        middle = (beginning+end)/2;
+        if(isBadVersion(middle)){
+            end = middle;
+        }
+        else{
+            beginning = middle+1;       
+        }
+    }
+       System.out.println(beginning);
+    }
+}
