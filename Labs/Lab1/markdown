@@ -1,0 +1,1 @@
+I first created an array of numbers, then a target number. I then created a for loop to iterate through the numbers in the array. I then subtracted the target number by the current number in the array and saved its value in 'a'. I then checked if 'a' was in the array. If it is it prints the indices of the 2 numbers that add up to target

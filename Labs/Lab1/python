@@ -1,0 +1,8 @@
+nums = [1,4,5, 8, 9]
+target = 6
+
+for i in nums:
+    a = target - i
+    if a in nums:
+        print([i, a])
+        break

@@ -1,0 +1,14 @@
+class Main {
+    public static void main(String[] args) {
+        int[]nums = {1,4,5,8,9};
+        int target = 6;
+        
+        for(int i = 0; i<nums.length; i++){
+            int a = target - nums[i];
+            if(a >= 0 && nums[i] != target && nums[i] != a){
+                System.out.print("[" + nums[i] + ", " + a + "]");
+                break;
+            }
+        }
+    }
+}
