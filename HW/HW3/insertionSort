@@ -1,0 +1,4 @@
+Problem 1:
+Time complexity Analysis:
+When the array is already sorted, we get the best case scenario. There would only be 1 comparison in each iteration. There would be n-1 comparisons. In the worst case however it would be (n(n-1))/2. Each iteration would have the same amount of comparisons. The time complexity would be O(n^2).
+
