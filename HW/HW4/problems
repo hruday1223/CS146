@@ -1,0 +1,30 @@
+HW4
+
+Problem 1:
+
+Best Case: The best case in insertion sort would be O(n) because in this case the list would already be in the correct order. Therefore there would only be one iteration taking place.
+
+Average Case: The average case would be O(n^2). The elements in this array would not in the correct order already and would mostly be more random. 
+
+Worst Case: The worst case would be O(n^2) as well. The elements in this array would be in the reverse order. Each element would need to be compared to the sorted element to find its position.
+
+
+
+Time complexity = O(n^2)
+
+Problem 2:
+
+Best Case: The best case would be O(n^2). This is when rowA or colB is 1. This way the first loop would run once.
+
+Average Case: The average case would be O(n^3). The n^2 that comes from the result and the n from the for loops iterating would add up to O(n^3).
+
+Worst Case: The worst case would be O(n^3), same as the average. The n^2 that comes from the result and the n from the for loops iterating would add up to O(n^3). 
+
+1
+n^2
+n
+n
+n
+Time complexity = O(n^3)
+
+
