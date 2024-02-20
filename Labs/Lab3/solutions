@@ -1,0 +1,27 @@
+Problem 1:
+1) 10000000000n2 vs n3
+	n^3 is asymptotically greater than 10000000000n2. Due n being to the power of 3, it grows exponentially larger than 10000000000n2.
+
+2) n2 log(n) vs n(log(n))10
+ n(log(n))10 is asymptotically greater than n2 log(n) because it has the higher power allowing it to grow faster.
+
+
+3) n(logn) vs 2 root(n)
+N log(n) is asymptotically greater than 2 root (n). Even though the square root of n would be larger than log n, the constant n in n(logn) allows it to grow faster than 2 root(n)
+
+
+4) 2^(n) vs 2^(2n)
+2^(2n) is asymptotically greater because the exponent of 2 would be doubled the exponent of 2^n. This allows it to grow faster
+
+
+Problem 2:
+Best Case: 
+The best case is when  n is  equal to 5. Since it is a prime number and is greater than 4, it only goes through the loop once.
+Worst Case:
+The worst case is when n isn’t a prime number, having to make the loop run many times.
+Average Case: 
+The average case is when n isn’t a prime number but after a number of iterations it hits.
+
+
+Oroot(n)
+
