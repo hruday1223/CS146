@@ -1,0 +1,2 @@
+I initialized an adjacency matrix to represent the distances between cities. 
+I then populated the adjacency matrix to represent the distances between cities.After that I found the shortest distances between the city pairs. Then counted the reachable cities within the distance threshold. At the end I returned the city with the smallest number or reachable cities.

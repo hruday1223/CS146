@@ -1,0 +1,79 @@
+ public static int findTheCity(int n, int[][] edges, int distanceThreshold){
+        int[][] distance = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            Arrays.fill(distance[i], Integer.MAX_VALUE);
+            distance[i][i] = 0;
+        }
+        for (int i = 0; i<edges.length;i++) {
+            int from = edges[i][0];
+            int to = edges[i][1];
+            int weight = edges[i][2];
+            distance[from][to] = weight;
+            distance[to][from] = weight;
+        }
+        
+        for (int k = 0; k < n; k++) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (distance[i][k] != Integer.MAX_VALUE && distance[k][j] != Integer.MAX_VALUE) {
+                        distance[i][j] = Math.min(distance[i][j], distance[i][k] + distance[k][j]);
+                    }
+                }
+            }
+        }
+        
+        int minCities = n + 1;
+        int result = -1;
+        for (int i = 0; i < n; i++) {
+            int reachableCities = 0;
+            for (int j = 0; j < n; j++) {
+                if (distance[i][j] <= distanceThreshold) {
+                    reachableCities++;
+                }
+            }
+            if (reachableCities <= minCities) {
+                minCities = reachableCities;
+                result = i;
+            }
+        }
+        return result;
+    } public static int findTheCity(int n, int[][] edges, int distanceThreshold){
+        int[][] distance = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            Arrays.fill(distance[i], Integer.MAX_VALUE);
+            distance[i][i] = 0;
+        }
+        for (int i = 0; i<edges.length;i++) {
+            int from = edges[i][0];
+            int to = edges[i][1];
+            int weight = edges[i][2];
+            distance[from][to] = weight;
+            distance[to][from] = weight;
+        }
+        
+        for (int k = 0; k < n; k++) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (distance[i][k] != Integer.MAX_VALUE && distance[k][j] != Integer.MAX_VALUE) {
+                        distance[i][j] = Math.min(distance[i][j], distance[i][k] + distance[k][j]);
+                    }
+                }
+            }
+        }
+        
+        int minCities = n + 1;
+        int result = -1;
+        for (int i = 0; i < n; i++) {
+            int reachableCities = 0;
+            for (int j = 0; j < n; j++) {
+                if (distance[i][j] <= distanceThreshold) {
+                    reachableCities++;
+                }
+            }
+            if (reachableCities <= minCities) {
+                minCities = reachableCities;
+                result = i;
+            }
+        }
+        return result;
+    }

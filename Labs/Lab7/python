@@ -1,0 +1,29 @@
+ def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
+        distance = [[float('inf')] * n for _ in range(n)]
+        for i in range(n):
+            distance[i][i] = 0
+        
+        for edge in edges:
+            from_city, to_city, weight = edge
+            distance[from_city][to_city] = weight
+            distance[to_city][from_city] = weight
+        
+        for k in range(n):
+            for i in range(n):
+                for j in range(n):
+                    if distance[i][k] != float('inf') and distance[k][j] != float('inf'):
+                        distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])
+        
+        min_cities = n + 1
+        result = -1
+        
+        for i in range(n):
+            reachable_cities = 0
+            for j in range(n):
+                if distance[i][j] <= distanceThreshold:
+                    reachable_cities += 1
+            if reachable_cities <= min_cities:
+                min_cities = reachable_cities
+                result = i
+        
+        return result
