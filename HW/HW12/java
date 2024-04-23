@@ -1,0 +1,45 @@
+import java.util.*;
+
+class Solution {
+    public int minCostToSupplyWater(int n, int[] wells, int[][] pipes) {
+        List<int[]>allPipes= new ArrayList<>();
+        
+        for (int i = 0;i < wells.length;i++) {
+            allPipes.add(new int[]{0,i+1, wells[i]});
+            allPipes.add(new int[]{i+1,0, wells[i]});
+        }
+        
+        for (int i = 0;i<pipes.length;i++) {
+            allPipes.add(pipes[i]);
+        }
+        
+        int[] parent = new int[n + 1];
+        for (int i = 0;i <= n;i++) {
+            parent[i] = i;
+        }
+        
+        int totalCost = 0;
+        for (int i = 0; i < allPipes.size(); i++) {
+                int[] pipe = allPipes.get(i);
+                int house1 = pipe[0];
+                int house2 = pipe[1];
+                int cost = pipe[2];
+                int root1 = find(parent, house1);
+                int root2 = find(parent, house2);
+    
+        if (root1 != root2) {
+            parent[root1] = root2;
+            totalCost += cost;
+             }
+        }
+        
+        return totalCost;
+    }
+    
+    private int find(int[] parent, int node) {
+        if (parent[node] != node) {
+            parent[node] = find(parent, parent[node]);
+        }
+        return parent[node];
+    }
+    

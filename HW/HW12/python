@@ -1,0 +1,27 @@
+def minCostToSupplyWater(self, n: int, wells: List[int], pipes: List[List[int]]) -> int:
+        all_pipes = []
+        
+        for i in range(len(wells)):
+            all_pipes.append([0,i+1, wells[i]])
+            all_pipes.append([i+1,0, wells[i]])
+        
+        for pipe in pipes:
+            all_pipes.append(pipe)
+        
+        parent = [i for i in range(n + 1)]
+        
+        for pipe in all_pipes:
+            house1, house2, cost = pipe
+            root1 = self.find(parent, house1)
+            root2 = self.find(parent, house2)
+    
+            if root1 != root2:
+                parent[root1] = root2
+                totalcost += cost
+        
+        return totalcost
+    
+    def find(self, parent, node):
+        if parent[node] != node:
+            parent[node] = self.find(parent, parent[node])
+        return parent[node]

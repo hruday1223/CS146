@@ -1,0 +1,1 @@
+I used Kruskal's algorithm to find the minimum spanning tree of the graph. I treated each house as a node and each pipe connection as an edge between the houses. 
