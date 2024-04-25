@@ -1,0 +1,16 @@
+class Coin:
+    def coinChange(self, coins, amount):
+        min = [amount + 1] * (amount + 1)
+        min[0] = 0
+        
+        for i in range(1, amount + 1):
+            for coin in coins:
+                if coin <= i:
+                    newCoins = min[i - coin] + 1
+                    if newCoins < min[i]:
+                        min[i] = newCoins
+        
+        if min[amount] > amount:
+            return -1
+        else:
+            return min[amount]

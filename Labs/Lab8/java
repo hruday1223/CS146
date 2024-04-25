@@ -1,0 +1,28 @@
+import java.util.Arrays;
+class Coin {
+   public int coinChange(int[] coins, int amount){
+    int[] min = new int[amount+1];
+    for (int i=0;i< min.length; i++){
+        min[i] = amount+ 1;
+    }
+    min[0] = 0;
+    
+    for (int i=1;i <= amount;i++){
+        for (int j =0; j < coins.length; j++){
+            int coin =coins[j];
+            if (coin <= i) {
+                int newCoins= min[i - coin] + 1;
+                if (newCoins< min[i]){
+                    min[i] = newCoins;
+            }
+        }
+        }
+    }
+    
+    if (min[amount]> amount){
+        return -1;
+    } else{
+        return min[amount];
+}
+}
+

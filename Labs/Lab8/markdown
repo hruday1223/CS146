@@ -1,0 +1,1 @@
+Created an array to store the minimum number of coins nedded for the ammount. THen i gave values to the array. Created a nested loop to see the minimum number of coins in order to make up the amount. Then check the amount with the minium amount of coins to return.
