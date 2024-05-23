@@ -1,0 +1,1 @@
+Started by sorting the intervals. Then created a priority queue to store the end times. THen the for loop takes the start and endtimes of each interval. The if statement checks if the priority queue isnt empty if the start time is greater or equal to the end time. 

@@ -1,0 +1,13 @@
+def minMeetingRooms(self, intervals):
+
+        end_times = []  
+        
+        for interval in intervals:
+            start_time, end_time = interval
+            
+            if end_times and start_time >= end_times[0]:
+                heapq.heappop(end_times)
+ 
+            heapq.heappush(end_times, end_time)
+
+        return len(end_times)
