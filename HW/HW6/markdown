@@ -1,0 +1,1 @@
+Stored the triplets that adds up to zero. Then sorted nums in ascending order. Then loop through the array for the elements needed. if the same element is there we skip it. Then we find pairs to find the triplets. WE then ensure that it is unique to find to find the correct triplet whose sum is zero.
