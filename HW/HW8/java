@@ -1,0 +1,29 @@
+public class LongestPalindrome {
+    public int longestPalindrome(String s) {
+        if (s.isEmpty()) 
+            return 0;
+        
+        Map<Character, Integer> frequency = new HashMap<>();
+        int max = 0;
+        boolean odd = false;
+        
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            frequency.put(c, frequency.getOrDefault(c, 0) + 1);
+        }
+
+        
+        for (int count : frequency.values()) {
+            if (count % 2 == 0) {
+                max += count;
+            } else {
+                max += count - 1;
+                odd = true;
+            }
+        }
+        
+        if (odd) {
+            max++;
+        }
+        return max;
+    }

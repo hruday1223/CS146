@@ -1,0 +1,1 @@
+Chek if s is empty. Created a hashmap to store the frequecny of the characters in s. Then we loop through s and and for each character of c we update the frequency map by incrementing its count. In the next for loop we go through the values in  the map. We see what we can symmetrically include. after checking if odd is true we return max.
