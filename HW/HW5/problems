@@ -1,0 +1,37 @@
+Problem 1:
+1) T(N) = 2T(N-1) + 1
+A = 2, b = 1, f(N) = 1
+
+2) T(N) = 3T(N-1) + n
+A = 3, b =1, f(N) = n
+
+
+3) T(N) = 9T(N/2) + n2
+A = 9, b = 2, f(N) =n^2
+
+
+4) T(N) = 100T(N/2) + nlog2cn + 1  (c is a constant)
+A = 100, b =2, f(N) =nlog2cn + 1
+
+
+5) T(N) = 4T(N/2) + n2logn
+A = 4, b = 2, f(N) =  n2logn
+
+
+6) T(N) = 5T(N/2) + n2/logn
+A = 5, b = 2, f(N) = n2/logn
+
+Problem 2: 
+yetAnotherFunc(n):
+ if n > 1:
+   for(i=0;i<10n;i++)
+     doSomething;
+   yetAnotherFunc(n/2);
+   yetAnotherFunc(n/2);
+
+T(n)=20n+2T(n/2)
+a=2
+b=2
+f(n)=20n
+T(n)=O(n^(logb a) logn) = O(nlogn)
+
