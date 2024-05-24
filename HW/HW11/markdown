@@ -1,0 +1,1 @@
+I take the old color the see if it differs from the new color. if it does it goes to the dfs method. Here the method looks at the neighor pixels it changes it from the old color to the new color in all 4 directions. The image array is then returned.
