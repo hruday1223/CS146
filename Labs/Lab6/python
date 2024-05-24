@@ -1,0 +1,31 @@
+def canFinish(numCourses: int, prerequisites: List[List[int]]) -> bool:
+    adjList = [[] for _ in range(numCourses)]
+    
+    for course,prereq in prerequisites:
+        adjList[course].append(prereq)
+        
+    visited = [False]*numCourses
+    recursionStack = [False]*numCourses
+    
+    def dfs(course,adjList,visited, recursionStack):
+        if recursionStack[course]:
+            return True
+        if visited[course]:
+            return False
+        
+        visited[course] = True
+        recursionStack[course] = True
+        
+        for adjacentCourse in adjList[course]:
+            if dfs(adjacentCourse,adjList, visited,recursionStack):
+                return  True
+        
+        recursionStack[course] =False
+        return False
+    
+    for i in range(numCourses):
+        if not visited[i]:
+            if dfs(i, adjList,visited,recursionStack):
+                return False
+            
+    return True
