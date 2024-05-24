@@ -1,0 +1,1 @@
+If the root is null we return null becasue there is nothing to invert. We then swap the left and right children. Then we pass the subrees back into the method to swap their children. After this process finishes we return the root.
