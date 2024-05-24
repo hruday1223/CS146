@@ -1,0 +1,1 @@
+we call a helper method with three parameters so that we can traverse through it. In the helper method we start off by checking if the current node is empty and if it is then it statisfies the bst property. We then check if the current node is within the valid range. THen we check the left and rifght subtrees recursively.

@@ -1,0 +1,11 @@
+def is_valid_BST(root):
+    return is_valid_BST_util(root,float("-inf"),float("inf"))
+
+def is_valid_BST_util(node, min_val, max_val):
+    if not node:
+        return True
+    
+    if node.val<=min_val or node.val>=max_val:
+        return False
+    
+    return is_valid_BST_util(node.left,min_val, node.val) and is_valid_BST_util(node.right, node.val,max_val)
